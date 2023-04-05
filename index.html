@@ -30,7 +30,6 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                font-size: 25px;
                 height: 100vh;  
                 width: 100vw;
                 background-size: 400% 400%;
@@ -41,7 +40,6 @@
                 padding-bottom: 200px;
             }
             .name {
-                font-size: 650px;
                 font-family: 'Disclaimer', sans-serif;
                 color: transparent;
                 cursor: default;
@@ -53,6 +51,27 @@
                 opacity: 0.65;
                 text-shadow: 0 0 5px #FAFAFA;
                 transition: all 2s ease-out;
+            }
+
+            @media screen and (min-width: 1240px) {
+                div.name {
+                    font-size: 650px;
+                }
+            }
+            @media screen and (max-width: 1239px) {
+                div.name {
+                    font-size: 550px;
+                }
+            }
+            @media screen and (max-width: 1050px) {
+                div.name {
+                    font-size: 450px;
+                }
+            }
+            @media screen and (max-width: 860px) {
+                div.name {
+                    font-size: 350px;
+                }
             }
         </style>
     </head>
