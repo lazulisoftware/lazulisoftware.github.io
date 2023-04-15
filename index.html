@@ -8,69 +8,139 @@
             body {
                 margin: 0;
                 padding: 0;
+                overflow: hidden;
             }
+
+            #bg-wrap {
+                position: relative;
+                box-sizing: border-box;
+                height: 100%;
+            }
+
             @font-face {
-                font-family: 'Silkscreen';
-                src: url('./assets/Silkscreen.ttf') format('truetype');
+                font-family: 'Disclaimer';
+                src: url('./assets/Disclaimer.otf') format('opentype');
             }
+
             .hero {
-                background: #FCFCFC;
-                background-image: radial-gradient(#003EF5 .75px, transparent 0);
-  background-size: 20px 20px;
-  background-position: -19px -19px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                height: 100vh;  
-                width: 100vw;
-                color: #003EF5;
+                animation: gradient 15s ease infinite;           
                 box-sizing: border-box;
+                padding-bottom: 200px;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
             }
-            .heading {
-                font-family: 'Silkscreen', sans-serif;
-                color: #003EF5;
+
+            .name {
+                font-family: 'Disclaimer', sans-serif;
+                color: transparent;
                 cursor: default;
-                font-size: 225px;
-                /* background-color: #003EF5; */
-                padding-left: 30px;
-                padding-right: 30px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 200px
+                opacity: 1;
+                text-shadow: 0 0 1.5px #FFFFFF;
             }
-            .subheading {
-                font-family: 'Silkscreen', sans-serif;
-                color: #003EF5;
-                cursor: default;
-                font-size: 75px;
+
+            .button{
+                display: inline-block;
+                outline: 0;
+                border: 0;
+                cursor: pointer;
+                border-radius: 8px;
+                padding: 14px 24px 16px;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 1;
+                transition: transform 200ms,background 200ms;
+                background: transparent;
+                color: #FFFFFF;
+                box-shadow: 0 0 0 3px #FFFFFF inset;
+                
             }
-            .link {
-                margin-top:58px;
-                border: 2px solid #003EF5;
-                background: #FCFCFC;
-                color: #003EF5;
-                font-family: 'Silkscreen', sans-serif;
-                height: 45px;
-                font-size: 15px;
+
+            .button:hover{
+                transform: translateY(-2px);
+                background: #F9F9F9;
+                color: #434343;
             }
-            .link:hover {
-                background-color: #003EF5;
-                color: #FCFCFC;
+
+            @media screen and (min-width: 1240px) {
+                div.name {
+                    font-size: 650px;
+                }
+            }
+
+            @media screen and (max-width: 1239px) {
+                div.name {
+                    font-size: 550px;
+                }
+            }
+
+            @media screen and (max-width: 1050px) {
+                div.name {
+                    font-size: 450px;
+                }
+            }
+
+            @media screen and (max-width: 860px) {
+                div.name {
+                    font-size: 350px;
+                }
             }
         </style>
     </head>
     <body>
+        <div id="bg-wrap">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient>
+                    <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient>
+                    <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient>
+                    <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient>
+                    <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient>
+                    <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient>
+                </defs>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient4)">
+                    <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" />
+                    <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite" />
+                    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient5)">
+                    <animate attributeName="x" dur="23s" values="0%;-25%;0%" repeatCount="indefinite" />
+                    <animate attributeName="y" dur="24s" values="25%;-25%;25%" repeatCount="indefinite" />
+                    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient6)">
+                    <animate attributeName="x" dur="25s" values="-25%;0%;-25%" repeatCount="indefinite" />
+                    <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" />
+                    <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)">
+                    <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"/>
+                    <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"/>
+                    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)">
+                    <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"/>
+                    <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"/>
+                    <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"/>
+                </rect>
+                <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)">
+                    <animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"/>
+                    <animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"/>
+                    <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"/>
+                </rect>
+            </svg>
+        </div>
         <div class="hero">
-            <div class="heading">Lazuli</div>
-            <div class="subheading"> Software Co.</div>
-            <a href="http://notes.lazuli.software">
-            <button class="link">
-                Release Notes
-            </button>
+            <div class="name">LAZULi</div>
+            <a href="https://notes.lazuli.software" target="_blank">
+                <button class="button" role="button">Release Notes</button>
             </a>
         </div>
     </body>
 </html>
-
